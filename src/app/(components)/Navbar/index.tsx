@@ -1,5 +1,6 @@
 "use client";
-import { Bell, Menu, Sun } from "lucide-react";
+import { Bell, Menu, Settings, Sun } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const index = () => {
@@ -13,7 +14,7 @@ const index = () => {
         >
           <Menu className="w-4 h-4" />
         </button>
-      </div>
+      
       <div className="relative">
         <input
           type="search"
@@ -24,7 +25,7 @@ const index = () => {
           <Bell className="text-gray-500" size={20} />
         </div>
       </div>
-
+      </div>
       {/* RIGHT SIDE */}
       <div className="flex justify-between items-center gap-5">
         <div className="hidden md:flex justify-between items-center gap-5">
@@ -42,9 +43,12 @@ const index = () => {
           <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
             <div className="w-9 h-9">Image</div>
-            <span className="font-semibold">Daniel Kurzer</span>
+            <span className="font-semibold">Daniel<br />Kurzer</span>
           </div>
         </div>
+        <Link href="/settings" >
+          <Settings className="cursor-pointer text-ray-500" size={24} />
+        </Link>
       </div>
     </div>
   );
