@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="transition-all duration-500">
       <body className={inter.className}>
         <DashboardWrapper>{children}</DashboardWrapper>
       </body>
